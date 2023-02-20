@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Roth IRA Contribution Limit Calculator</title>
+	<link rel="stylesheet" href="./public/style.css">
+	<script src="./public/calc.js"></script>
+</head>
+<body>
+	<h1>Roth IRA Contribution Limit Calculator</h1>
+	<form>
+		<label for="year">Tax Year:</label>
+		<select id="year">
+			<option value="2022">2022</option>
+			<option value="2023">2023</option>
+		</select>
+		<label for="filing-status">Filing Status:</label>
+		<select id="filing-status">
+			<option value="married-jointly">Married Filing Jointly</option>
+			<option value="married-separately">Married Filing Separately</option>
+			<option value="individual">Individual</option>
+		</select>
+		<label for="magi">MAGI:</label>
+		<input type="number" id="magi" name="magi" required>
+		<input type="submit" value="Calculate">
+		<div id="error-message"></div>
+		<div id="magi-info">
+			<p><strong>Modified Adjusted Gross Income (MAGI)</strong> is used to determine eligibility for certain tax deductions and credits, including the Roth IRA contribution limit. Your MAGI is your adjusted gross income (AGI) with some deductions added back in. For more information, see the <a target="_blank" href="https://www.irs.gov/publications/p590a#en_US_2019_publink1000230375">IRS Publication 590-A</a>.</p>
+		</div>
+	</form>
+	<div id="result"></div>
+</body>
+</html>
